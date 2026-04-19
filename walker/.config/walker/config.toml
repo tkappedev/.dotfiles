@@ -1,0 +1,45 @@
+[keybinds]
+quick_activate = []
+next = ["Down", "ctrl n"]
+previous = ["Up", "ctrl p"]
+page_down = ["Page_Down", "ctrl d"]
+page_up = ["Page_Up", "ctrl u"]
+
+[providers.actions]
+bluetooth = [
+  { action = "remove", bind = "ctrl x", after = "AsyncReload" },
+]
+
+desktopapplications = [ 
+  { action = "pin", bind = "ctrl b", after = "AsyncReload" },
+  { action = "unpin", bind = "ctrl b", after = "AsyncReload" },
+  { action = "pinup", bind = "ctrl Up", after = "AsyncReload" },
+  { action = "pindown", bind = "ctrl Down", after = "AsyncReload" },
+]
+
+calc = [
+  { action = "delete", bind = "ctrl x", after = "AsyncReload" },
+  { action = "delete_all", bind = "ctrl shift x", after = "AsyncReload" },
+]
+
+todo = [
+  { action = "delete", bind = "ctrl x", after = "AsyncClearReload" },
+  { action = "clear", bind = "ctrl shift x", after = "AsyncClearReload" },
+]
+
+clipboard = [
+  { action = "unpin", bind = "ctrl b", after = "AsyncClearReload" },
+  { action = "pin", bind = "ctrl b", after = "AsyncClearReload" },
+  { action = "remove", bind = "ctrl x", after = "AsyncClearReload" },
+  { action = "remove_all", label = "clear", bind = "ctrl shift x", after = "AsyncClearReload" },
+]
+
+bookmarks = [
+  { action = "delete", bind = "ctrl x", after = "AsyncClearReload" },
+]
+
+wireplumber = [
+  { action = "increase_volume", label = "+volume", bind = "ctrl ]", after = "Nothing" },
+  { action = "decrease_volume", label = "-volume", bind = "ctrl [", after = "Nothing" },
+  { action = "set_default_device", label = "set default", bind = "ctrl s", after = "Nothing" },
+]
